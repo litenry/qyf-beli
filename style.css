@@ -1,7 +1,7 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   padding: 20px;
-  background: #f9f4ff; /* Lila muy claro */
+  background: #f9f4ff;
 }
 
 h1 {
@@ -10,31 +10,47 @@ h1 {
   color: #5e4b8b;
 }
 
+#malla > h2 {
+  margin-top: 40px;
+  color: #4a3b73;
+  font-size: 1.3em;
+  position: relative;
+  padding-left: 30px;
+}
+
+#malla > h2::before {
+  content: "⭐";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .malla {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .ramo {
-  background: #e6ddfb; /* Fondo lila suave */
+  background: #e6ddfb;
   padding: 15px;
   border-radius: 15px;
   box-shadow: 0 3px 8px rgba(130, 100, 180, 0.2);
-  position: relative;
   cursor: pointer;
   transition: 0.3s;
+  border: 2px solid #c1b0eb;
 }
 
 .ramo:hover {
   background: #d4c3f5;
+  transform: scale(1.02);
 }
 
 .ramo .nombre {
   font-weight: bold;
   color: #4a3b73;
-  font-size: 1.1em;
+  font-size: 1.05em;
 }
 
 .ramo .prerequisitos {
@@ -43,9 +59,8 @@ h1 {
   color: #6a5d89;
 }
 
-
-.ramo .prerequisitos {
-  margin-top: 10px;
-  font-size: 0.9em;
-  color: #6a5d89;
+.ramo.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
+
