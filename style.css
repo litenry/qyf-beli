@@ -1,0 +1,39 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.malla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.ramo {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
+  cursor: pointer;
+}
+
+.ramo:hover {
+  background: #e0f7fa;
+}
+
+.ramo .nombre {
+  font-weight: bold;
+}
+
+.ramo .prerequisitos {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #555;
+}
